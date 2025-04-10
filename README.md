@@ -1,84 +1,93 @@
-# text-to-image-generator
-								                                                  INFINIA AI Image Generator
-Project Overview
-	The INFINIA AI Image Generator uses OpenAI's GPT-3.5 model to enhance text inputs and generate images based on those enhanced descriptions using Hugging Face's Stable Diffusion model. 
-	The system aims to create imaginative images based on descriptions provided by the user.
+# INFINIA AI Image Generator
 
-  Technologies Used
-		OpenAI GPT-3.5 API: Used for text enhancement. Short descriptions entered by the user are expanded into detailed futuristic descriptions by GPT-3.5.
+##  Project Overview
+The **AI Image Generator** uses **OpenAI's GPT-3.5 model** to enhance text inputs and generate images based on those enhanced descriptions using Hugging Face's **Stable Diffusion** model.  
+The system aims to create imaginative images based on descriptions provided by the user.
 
-		Hugging Face Diffusers (Stable Diffusion): The enhanced text is passed to the Stable Diffusion model to generate an image.
+---
 
-		IPyWidgets: Provides a user-friendly interface within the Colab environment, allowing for easy tracking of the image generation process.
+##  Technologies Used
 
-		Google Colab: Used to run the model and provide GPU access for image generation.
+- **OpenAI GPT-3.5 API**  
+  Used for text enhancement. Short descriptions entered by the user are expanded into detailed futuristic descriptions by GPT-3.5.
 
-     Setup and Requirements
-	I recommend using Google Colab to run this project. Follow the steps below to set up and run the project.
+- **Hugging Face Diffusers (Stable Diffusion)**  
+  The enhanced text is passed to the Stable Diffusion model to generate an image.
 
-Step 1: Go to Google Colab
-		Navigate to the provided Google Colab link.
-		https://colab.research.google.com/
+- **IPyWidgets**  
+  Provides a user-friendly interface within the Colab environment, allowing for easy tracking of the image generation process.
 
-Step 2: Run the Code
-  Follow these steps:
+- **Google Colab**  
+  Used to run the model and provide GPU access for image generation.
 
-Get API Key:
+---
 
-Obtain an API key from OpenAI.
+##  Setup and Requirements
 
+I recommend using **Google Colab** to run this project. Follow the steps below to set up and run the project.
 
-Start the Notebook:
-	Insert the OpenAI key in the provided fields.
+### Step 1: Go to Google Colab
 
-	Open the ipynb file from this repository and run it in Google Colab.
+Navigate to the provided Google Colab link:  
+[https://colab.research.google.com/](https://colab.research.google.com/)
 
-Step 3: Required Libraries
+### Step 2: Run the Code
+
+1. **Get API Key**  
+   - Obtain an API key from OpenAI.
+
+2. **Start the Notebook**  
+   - Insert the OpenAI key in the provided field.  
+   - Open the `main.ipynb` file from this repository and run it in Google Colab.
+
+### Step 3: Required Libraries
+
 The following libraries are required for the project:
 
-- requests
-- json (Getting Enhance text from external source with json API)
-- torch
-- diffusers (Hugging Face Library)
-- PIL (Pillow)
-- IPython
-- ipywidgets (for UI)
+- `requests`
+- `json` (for getting enhanced text from external API)
+- `torch`
+- `diffusers` (Hugging Face Library)
+- `PIL` (Pillow)
+- `IPython`
+- `ipywidgets` (for UI)
 
-These libraries will be automatically installed in the Colab environment.
-When you first start the code there will be a installation process for Hugging Face's Stable Diffusion model
+>  These libraries will be automatically installed in the Colab environment.  
+> When you first start the code, there will be an installation process for Hugging Face's Stable Diffusion model.
 
-Step 4: Generate an Image
-	Enter a Prompt: Provide a description (e.g., "a futuristic city with flying cars").
+### Step 4: Generate an Image
 
-	Enhance Text: The system will use the GPT-3.5 model to enhance the entered description.
+- **Enter a Prompt**: Provide a description (e.g., `"a futuristic city with flying cars"`).
+- **Enhance Text**: The system will use GPT-3.5 to enhance the description.
+- **Generate Image**: The enhanced description will be passed to Stable Diffusion.
+- **View Image**: The generated image will be displayed within the Colab interface.
 
-	Generate Image: The enhanced description will be passed to the Stable Diffusion model to create an image.(Pipeline created)
+---
 
-	View Image: The generated image will be displayed within the Colab interface.
+##  Usage Steps
 
-Usage Steps
-        	Open Colab and Run the Code: Execute the code step-by-step to start the project.
+1. Open Colab and run the code step-by-step.
+2. Enter your **OpenAI API key**.
+3. Input your **description** in the prompt box.
+4. Click **Generate Image**.
+5. View and optionally **download the image**.
 
-		Enter API Keys: Insert your OpenAI and Hugging Face API keys in the appropriate fields.
+---
 
-		Input the Prompt: Type your description into the input box on the screen.
+##  UI Features
 
-		Generate Image: The system will enhance your description and generate the corresponding image.
+- **Input Box**: A text box to enter the description.
+- **Image Display**: The generated image is displayed on the screen.
+- **Progress Bar**: Shows the current status of the image generation process.
 
-		View and Download Image: The generated image will appear on the screen.
+---
 
-UI Features
-Input Box: A text box to enter the description.
+##  Project Architecture
 
-Image Display: The generated image will be displayed on the screen.
+1. **Prompt Input**: A short description is taken from the user.
+2. **Text Enhancement**: The description is enhanced using OpenAI GPT-3.5.
+3. **Image Generation**: The enhanced text is passed to Hugging Face Stable Diffusion.
+4. **UI**: A user-friendly interface tracks the process and displays results.
 
-Progress Bar: A progress bar will show the status of the image generation process.
+---
 
-Project Architecture
-Prompt Input: A short description is taken from the user.
-
-Text Enhancement: The description is enhanced using OpenAI GPT-3.5.
-
-Image Generation: The enhanced text is passed to Hugging Face Stable Diffusion to generate an image.
-
-UI: A user-friendly interface tracks the image generation process.
